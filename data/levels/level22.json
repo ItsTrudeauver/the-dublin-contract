@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "id": 22,
+    "title": "Contract #022: Crossfire",
+    "description": "TACTICAL RAID: 8 Nodes, No Fakes. High Simultaneity. Who fired first?",
+    "timerSeconds": 240,
+    "glitchIntensity": 20,
+    "hasBin": false,
+    "journal": "The Bodycam audio confirms the 'Return Fire' order was given simultaneous to the Breach. The suspect didn't shoot first; the police fired a flashbang that was misidentified as a gunshot by the rookie on point."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Tac-Comms: Team Leader orders 'BREACH'.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 250
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Audio Sensor: Loud Bang (170dB).",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 250
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Tac-Comms: Rookie yells 'SHOTS FIRED!'.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 100
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Tac-Comms: Leader orders 'RETURN FIRE'.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 100
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Bodycam 1: Door removed by charges.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 400
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - Ballistics: Suspect weapon cold (Unfired).",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 400
+      }
+    },
+    {
+      "id": "n7",
+      "text": "--:-- - Bodycam 2: Flashbang deployed into room.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 400
+      }
+    },
+    {
+      "id": "n8",
+      "text": "--:-- - Medical: Suspect sustained 4 GSWs.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 250
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [],
+    "hash": "f68c1954acd9306bbddcee5f1eeb59b74e58a372af2761c5ecd1326101024750"
+  }
+}

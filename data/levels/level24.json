@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "id": 24,
+    "title": "Contract #024: Black Site",
+    "description": "INTERROGATION: 8 Nodes, 1 Hub. Causality Loop. Did the failure cause death, or vice versa?",
+    "timerSeconds": 260,
+    "glitchIntensity": 40,
+    "hasBin": true,
+    "journal": "The prisoner didn't die from the life support failure. The autopsy morph confirms neurotoxin. They killed him, THEN pulled the plug on the machine to make it look like a system crash."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Autopsy: Cause of Death - Cardiac Arrest (Natural).",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 250
+      },
+      "morph": {
+        "text": "--:-- - Autopsy: Tox Screen - Unidentified Neurotoxin Detected.",
+        "minTime": 180000,
+        "maxTime": 300000
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Life Support: Heart Rate Monitor Flatline.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 250
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Life Support: Power Failure Warning.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 250
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Room Audio: 'Subject is unresponsive.'",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 100
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Room Audio: 'Cut the power. Clean it up.'",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 100
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - Power Grid: Localized outage detected.",
+      "type": "fake",
+      "position": {
+        "x": 100,
+        "y": 400
+      }
+    },
+    {
+      "id": "n7",
+      "text": "--:-- - Biometric Log: Adrenaline Spike.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 400
+      }
+    },
+    {
+      "id": "n8",
+      "text": "--:-- - Manual Switch: Life Support Master OFF.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 250
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n6"
+    ],
+    "hash": "81efeb0a6a06e8a2c05cdf77db885ee9425c5763a2fff505f830e186d18b4cf2"
+  }
+}

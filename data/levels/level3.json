@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "id": 3,
+    "title": "Contract #003: The Distraction",
+    "description": "TUTORIAL: Use Simultaneity (<=>) for events happening at the same time.",
+    "timerSeconds": null,
+    "glitchIntensity": 0,
+    "hasBin": false,
+    "journal": "The fire alarm was a precision decoy. Security logs confirm the guard rotation left the Server Room exposed at the exact second the download began. This was a coordinated professional hit."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "03:00 - Alarm Log: Fire alarm triggered in East Wing.",
+      "type": "real",
+      "position": {
+        "x": 200,
+        "y": 150
+      }
+    },
+    {
+      "id": "n2",
+      "text": "03:00 - Server Log: Unauthorized data download begins in West Wing.",
+      "type": "real",
+      "position": {
+        "x": 200,
+        "y": 350
+      }
+    },
+    {
+      "id": "n3",
+      "text": "03:05 - Guard Report: All security personnel move to East Wing.",
+      "type": "real",
+      "position": {
+        "x": 550,
+        "y": 150
+      }
+    },
+    {
+      "id": "n4",
+      "text": "03:10 - Server Log: Download complete. 5TB stolen.",
+      "type": "real",
+      "position": {
+        "x": 800,
+        "y": 350
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [],
+    "hash": "a0f074a570001c181795ea2dd792648741792d5c0a1ecedf68378ca1ebf0f9cf"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "id": 28,
+    "title": "Contract #028: Mass Surveillance",
+    "description": "PROJECT PANOPTICON: 10 Nodes, 3 Fakes. The system is targeting innocents.",
+    "timerSeconds": 320,
+    "glitchIntensity": 60,
+    "hasBin": true,
+    "journal": "The 'Terrorist' identified by the drone was a journalist holding a camera, not a weapon. The AI didn't make a mistake; the 'Threat Threshold' was manually lowered to 0% for this specific ID to force a lethal engagement."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Drone Cam: Target Acquired (Sector 4).",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 150
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Facial Rec Hub: 98% Match 'Journalist A'.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 150
+      },
+      "morph": {
+        "text": "--:-- - Facial Rec Hub: Match Override -> 'Hostile Combatant'.",
+        "minTime": 180000,
+        "maxTime": 300000
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Threat Assessment AI: 'Object is Camera'.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 350
+      },
+      "morph": {
+        "text": "--:-- - Threat Assessment AI: 'Manual Override: Object is RPG'.",
+        "minTime": 180000,
+        "maxTime": 300000
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Command Hub: 'Engage Target' authorized.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 250
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Drone Log: Missile Fired.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 250
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - Casualty Report: 12 Civilians Dead.",
+      "type": "real",
+      "position": {
+        "x": 950,
+        "y": 400
+      }
+    },
+    {
+      "id": "n7",
+      "text": "--:-- - Admin Log: 'Parameter Adjustment: Lethality Max'.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 50
+      }
+    },
+    {
+      "id": "n8",
+      "text": "--:-- - Press Release: 'Terrorist cell neutralized.'",
+      "type": "fake",
+      "position": {
+        "x": 850,
+        "y": 100
+      }
+    },
+    {
+      "id": "n9",
+      "text": "--:-- - Witness: 'They were armed to the teeth.'",
+      "type": "fake",
+      "position": {
+        "x": 600,
+        "y": 450
+      }
+    },
+    {
+      "id": "n10",
+      "text": "--:-- - Weapon Log: 'Enemy fired first.'",
+      "type": "fake",
+      "position": {
+        "x": 100,
+        "y": 400
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n8",
+      "n9",
+      "n10"
+    ],
+    "hash": "a8c5e067578e20e2da4b8c01b6f4c517856b798be9c221a1b0945c03daee8e1e"
+  }
+}

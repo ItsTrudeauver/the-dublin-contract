@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "id": 17,
+    "title": "Contract #017: The Editor",
+    "description": "CENSORSHIP: High complexity hub. Determine why the front-page story was pulled.",
+    "timerSeconds": 190,
+    "glitchIntensity": 30,
+    "hasBin": true,
+    "journal": "The Editor didn't kill the story because of 'insufficient sources.' The Aethelgard wire transfer hit the accounts payable server at the exact moment the draft was flagged. Quid pro quo."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Journalist: Submits 'Housing Crisis' draft to server.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 250
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Editor Terminal: Draft received / Review started.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 250
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Bank Server: Large deposit from 'Shell Corp' to Publisher.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 50
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Editor Terminal: Status changed to 'KILL / DO NOT PUBLISH'.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 250
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Archive: Story moved to 'Deleted Items'.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 250
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - Email Log: 'Source reliability concerns cited.'",
+      "type": "fake",
+      "position": {
+        "x": 600,
+        "y": 450
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n6"
+    ],
+    "hash": "5a0b3290b3ac16323d57d1d586d0a17926bfd26988927c3400db1bc637264c5a"
+  }
+}

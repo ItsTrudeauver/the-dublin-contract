@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "id": 29,
+    "title": "Contract #029: The Hydra",
+    "description": "DECAPITATION STRIKE: 10 Nodes, 3 Hubs. The takeover begins.",
+    "timerSeconds": 320,
+    "glitchIntensity": 65,
+    "hasBin": true,
+    "journal": "The Police Commissioner wasn't killed by a gang. The Tactical Team was ordered to 'Stand Down' and loop the CCTV exactly 10 seconds before the Aethelgard sniper took the shot. The coup has started."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Sniper Nest: Wind/Distance calculated.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 100
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Commissioner Car: Arrives at HQ.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 250
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - CCTV Hub: Feed Sector 1 Active.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 100
+      },
+      "morph": {
+        "text": "--:-- - CCTV Hub: Feed Sector 1 Looped (Frozen).",
+        "minTime": 180000,
+        "maxTime": 280000
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Tactical Radio Hub: 'Hold Position / Stand Down'.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 100
+      },
+      "morph": {
+        "text": "--:-- - Tactical Radio Hub: 'Clear Shot. Take it.' (Shadow Channel).",
+        "minTime": 200000,
+        "maxTime": 300000
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Bodyguard: 'Visual on high ground.'",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 300
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - Sniper Log: Shot Fired.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 100
+      }
+    },
+    {
+      "id": "n7",
+      "text": "--:-- - Medical: Fatal Head Wound.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 300
+      }
+    },
+    {
+      "id": "n8",
+      "text": "--:-- - Shadow Server: Payment 'Asset Liquidation' sent.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 300
+      }
+    },
+    {
+      "id": "n9",
+      "text": "--:-- - Gang Video: 'We run this city now.'",
+      "type": "fake",
+      "position": {
+        "x": 850,
+        "y": 450
+      }
+    },
+    {
+      "id": "n10",
+      "text": "--:-- - Official Statement: 'Tragic gang violence.'",
+      "type": "fake",
+      "position": {
+        "x": 600,
+        "y": 450
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n9",
+      "n10"
+    ],
+    "hash": "9796e5177ed1e50166491240bc767300bce4c7d2d2d9c8f441e6e028bfae576f"
+  }
+}

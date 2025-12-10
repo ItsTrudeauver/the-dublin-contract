@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "id": 20,
+    "title": "Contract #020: The Architect",
+    "description": "HIGH VALUE TARGET: 8 Nodes, 2 Hubs. Intercepted logs are unstable. Trust nothing.",
+    "timerSeconds": 360,
+    "glitchIntensity": 40,
+    "hasBin": true,
+    "journal": "Police ruled it a robbery, but the data proves an execution. The CEO's Smart Home didn't malfunction; it was commanded to lock him in. The bodyguard didn't 'miss' the intruder; he was ordered to stand down."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Smart Home Hub: 'Lockdown Mode' activated.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 250
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Living Room Cam: Shutters close / Doors lock.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 250
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - CEO Phone: Outgoing Call to 'Aethelgard HQ'.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 450
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Bodyguard Log: 'Patrol Sector 1 - All Clear'.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 450
+      },
+      "morph": {
+        "text": "--:-- - Bodyguard Log: 'Order Received. Standing Down.'",
+        "minTime": 180000,
+        "maxTime": 300000
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Gas Line: Safety Valve disabled.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 250
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - CEO Phone: Biometric Heart Rate 0 (Signal Lost).",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 450
+      }
+    },
+    {
+      "id": "n7",
+      "text": "--:-- - Fire Sensor: Explosion detected.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 350
+      }
+    },
+    {
+      "id": "n8",
+      "text": "--:-- - Police Report: 'Accidental gas leak during robbery.'",
+      "type": "fake",
+      "position": {
+        "x": 850,
+        "y": 100
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n8"
+    ],
+    "hash": "dc3a93d8605146e46e868aca34cc62c4e832c3443935e76f39136dfb93bd456d"
+  }
+}

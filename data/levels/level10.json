@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "id": 10,
+    "title": "Contract #010: Dark Pattern",
+    "description": "TRAFFIC CONTROL: Hub structure detected. One event triggers multiple outcomes.",
+    "timerSeconds": 180,
+    "glitchIntensity": 25,
+    "hasBin": true,
+    "journal": "Aethelgard Logistics parked three trucks at key intersections simultaneously. It wasn't an accident; it was a blockade designed to stop the protest march from reaching City Hall."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "08:00 - Traffic HQ: Main Artery 'Green Wave' disabled manually.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 250
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Intersection A: Aethelgard Truck jackknifes.",
+      "type": "real",
+      "position": {
+        "x": 400,
+        "y": 100
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Intersection B: Aethelgard Truck stalls.",
+      "type": "real",
+      "position": {
+        "x": 400,
+        "y": 250
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Intersection C: Aethelgard Truck dumps cargo.",
+      "type": "real",
+      "position": {
+        "x": 400,
+        "y": 400
+      }
+    },
+    {
+      "id": "n5",
+      "text": "08:05 - Driver Log: 'Mechanical failure on all vehicles.'",
+      "type": "fake",
+      "position": {
+        "x": 100,
+        "y": 400
+      }
+    },
+    {
+      "id": "n6",
+      "text": "08:30 - City Cam: Protest march halted by gridlock.",
+      "type": "real",
+      "position": {
+        "x": 700,
+        "y": 250
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n5"
+    ],
+    "hash": "c7bce9b3378ae712c071af692997ebe895189740c962d28d87500d9ea03b55c8"
+  }
+}

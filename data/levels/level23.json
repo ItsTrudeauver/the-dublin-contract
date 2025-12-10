@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "id": 23,
+    "title": "Contract #023: The Frame",
+    "description": "IDENTITY THEFT: 7 Nodes, 2 Fakes. Physical evidence conflicts with digital reality.",
+    "timerSeconds": 260,
+    "glitchIntensity": 45,
+    "hasBin": true,
+    "journal": "The physical evidence was planted to match a stolen identity. The Metro Pass log initially looked damning, but the system update revealed the card ID didn't match the database hash. It was a clone."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Metro Pass: 'Subject A' Swipes in at Station North.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 200
+      },
+      "morph": {
+        "text": "--:-- - Metro Pass: 'Card ID Mismatch / Clone Detected'.",
+        "minTime": 180000,
+        "maxTime": 300000
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - CCTV: Person in hoodie exits Station North.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 200
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Crime Scene: Fingerprint found on weapon (Subject A).",
+      "type": "fake",
+      "position": {
+        "x": 600,
+        "y": 100
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Digital Shadow: Subject A Phone Ping (Station South).",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 400
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Witness: 'I saw Subject A's face clearly.'",
+      "type": "fake",
+      "position": {
+        "x": 600,
+        "y": 400
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - ATM Camera: Subject A withdrawing cash (Station South).",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 400
+      }
+    },
+    {
+      "id": "n7",
+      "text": "--:-- - Police Blotter: Suspect detained at Station South.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 300
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n3",
+      "n5"
+    ],
+    "hash": "e6294bce2b66c486787f68173a275d956e66fcd31436ee6a35ec29efd560b9c9"
+  }
+}

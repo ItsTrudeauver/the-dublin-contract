@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "id": 11,
+    "title": "Contract #011: Paper Trail",
+    "description": "FINANCIAL AUDIT: No contradictions found. Trace the flow of ownership.",
+    "timerSeconds": 200,
+    "glitchIntensity": 10,
+    "hasBin": false,
+    "journal": "The eviction was legal but manufactured. The property was transferred to a shell company, condemned, and sold to Aethelgard Development in the same hour. The 'safety' rating was bought."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "09:00 - Registry: Title Deed transferred to 'Vanguard Holdings'.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 150
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - City Council: Property marked 'Unsafe for Habitation'.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 150
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Court Order: Eviction Notice issued.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 150
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Bank Log: 'Vanguard Holdings' dissolves.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 350
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Registry: Property acquired by 'Aethelgard Dev'.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 350
+      }
+    },
+    {
+      "id": "n6",
+      "text": "10:00 - Security Cam: Tenants removed by private contractors.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 150
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [],
+    "hash": "6f8ac820454841b8e1dcca5707a320059f456d913182e208663b323648b8295e"
+  }
+}

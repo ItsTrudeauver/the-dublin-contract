@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "id": 25,
+    "title": "Contract #025: The Purge",
+    "description": "COORDINATED STRIKE: 9 Nodes, 2 Hubs, 2 Dummies. Two 'suicides' at the exact same second.",
+    "timerSeconds": 280,
+    "glitchIntensity": 50,
+    "hasBin": true,
+    "journal": "Two whistleblowers found dead in separate districts. The Police Reports claim suicide, but the Handler's phone pinged both locations sequentially. The autopsy morphs reveal they were injected with the same paralyzing agent."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Handler Phone: Proximity Ping (North District).",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 150
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Handler Phone: Proximity Ping (South District).",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 450
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Victim A (North): Heart Rate 0.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 150
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Victim B (South): Heart Rate 0.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 450
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Bank Hub: 'Cleaner' Payment processed to Handler.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 300
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - Autopsy A: 'Cause of Death: Self-Inflicted OD'.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 150
+      },
+      "morph": {
+        "text": "--:-- - Autopsy A: 'Tox Screen: Tetrodotoxin (Paralytic) Found'.",
+        "minTime": 180000,
+        "maxTime": 300000
+      }
+    },
+    {
+      "id": "n7",
+      "text": "--:-- - Autopsy B: 'Cause of Death: Hanging'.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 450
+      },
+      "morph": {
+        "text": "--:-- - Autopsy B: 'Tox Screen: Tetrodotoxin (Paralytic) Found'.",
+        "minTime": 180000,
+        "maxTime": 300000
+      }
+    },
+    {
+      "id": "n8",
+      "text": "--:-- - Police Statement: 'Tragic double suicide pact.'",
+      "type": "fake",
+      "position": {
+        "x": 850,
+        "y": 300
+      }
+    },
+    {
+      "id": "n9",
+      "text": "--:-- - CCTV Hub: Handler exits Victim A's building.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 50
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n8"
+    ],
+    "hash": "42161966e53d23c9ea10b2eb4caec7bce749bfe3852532cbc7a27c634ae34fcc"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "id": 19,
+    "title": "Contract #019: Ghost Signal",
+    "description": "BLACKOUT: Signal analysis. Use Simultaneity to identify the source of the jam.",
+    "timerSeconds": 210,
+    "glitchIntensity": 35,
+    "hasBin": true,
+    "journal": "The Raid Team didn't lose comms because of a 'dead zone.' An IMSI Catcher (Stingray) was active in the apartment above. It jammed the police band while simultaneously intercepting the warning text to the suspect."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Raid Leader: 'Breaching front door.'",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 150
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Spectrum Analyzer: Broad-spectrum noise spike (Jamming).",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 250
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Police Radio: Static / Signal Lost.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 150
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Suspect Phone: Incoming Text 'GET OUT NOW'.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 350
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Rear Camera: Suspect flees via fire escape.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 250
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - Tech Report: 'Radio batteries failed due to cold.'",
+      "type": "fake",
+      "position": {
+        "x": 350,
+        "y": 450
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n6"
+    ],
+    "hash": "8dd17f8302d7fd41f02ecfbd256eef813a8895ab2cc470446137f0e0b31848d5"
+  }
+}

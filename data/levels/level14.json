@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "id": 14,
+    "title": "Contract #014: Bad Medicine",
+    "description": "SUPPLY CHAIN: No contradictions (No Bin). Trace the custody chain of the spoiled cargo.",
+    "timerSeconds": 200,
+    "glitchIntensity": 10,
+    "hasBin": false,
+    "journal": "The insulin didn't spoil in the warehouse; it cooked in the truck. The driver disabled the refrigeration unit to save fuel during the unauthorized stop. The receiver signed for it without checking the temp tags."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Warehouse A: Dispatch. Cargo Temp 4°C (Safe).",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 150
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Truck 404: Engine OFF for 4 hours (Unauthorized Stop).",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 150
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - IoT Sensor: Internal Trailer Temp reaches 25°C.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 350
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Warehouse B: Receiving. Signature 'J. Doe'.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 150
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Clinic: Batch #992 flagged ineffective.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 150
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - Driver Log: Fuel economy bonus claimed.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 50
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [],
+    "hash": "972e9332795eaac0fc846b7ed8c1b22689454101703a87f29e9665154492ab6e"
+  }
+}

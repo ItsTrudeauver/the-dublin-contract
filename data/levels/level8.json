@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "id": 8,
+    "title": "Contract #008: The Double",
+    "description": "IDENTITY THEFT: Suspect spotted in two locations simultaneously. One timestamp is corrupted.",
+    "timerSeconds": 150,
+    "glitchIntensity": 25,
+    "hasBin": true,
+    "journal": "The 'Cafe Sightings' were a deepfake projection. The suspect wasn't drinking coffee; they were draining the ATM. The corrupted timestamp on the withdrawal log was a deliberate attempt to hide the sequence."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "14:00 - ATM Camera: Subject approaches terminal. Face obscured.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 150
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - ATM Log: Admin Access granted via cloned keycard.",
+      "type": "real",
+      "position": {
+        "x": 400,
+        "y": 150
+      }
+    },
+    {
+      "id": "n3",
+      "text": "14:05 - Social Media: Subject posts selfie from 'The Grind Cafe' (Metadata confirmed).",
+      "type": "fake",
+      "position": {
+        "x": 400,
+        "y": 400
+      }
+    },
+    {
+      "id": "n4",
+      "text": "14:10 - ATM System: Cash cassette 1 & 2 emptied.",
+      "type": "real",
+      "position": {
+        "x": 700,
+        "y": 150
+      }
+    },
+    {
+      "id": "n5",
+      "text": "14:15 - Street Cam: Subject enters getaway vehicle (Black Sedan).",
+      "type": "real",
+      "position": {
+        "x": 950,
+        "y": 150
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n3"
+    ],
+    "hash": "ad495377439d4dec6e44bba6948c49f9ad54625144f039adb3e6e7c36b574deb"
+  }
+}

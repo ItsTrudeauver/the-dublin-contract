@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "id": 16,
+    "title": "Contract #016: Clean Slate",
+    "description": "DATA INJECTION: High complexity hub. Trace the origin of the record deletion.",
+    "timerSeconds": 190,
+    "glitchIntensity": 25,
+    "hasBin": true,
+    "journal": "Standard automated maintenance doesn't force open firewalls. Someone used a spoofed IP to inject a 'sudo rm' command. The backup drive corruption was immediate collateral damage."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Firewall: Port 22 forced open.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 250
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Server: External IP connected.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 250
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Admin Terminal: Command 'sudo rm -rf /criminal_records/user_x'.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 250
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Backup Drive: 'Write Error / Corrupted'.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 100
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Background Check: 'No Criminal History Found'.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 400
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - System Log: 'Scheduled Maintenance Auto-Run'.",
+      "type": "fake",
+      "position": {
+        "x": 600,
+        "y": 450
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n6"
+    ],
+    "hash": "36d74995ce70ce7e5d048745a29af51090ad447d52035837344e53c86443d194"
+  }
+}

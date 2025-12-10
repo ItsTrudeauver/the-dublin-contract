@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "id": 9,
+    "title": "Contract #009: Static Noise",
+    "description": "CIVIL UNREST: Timeline corruption detected. Deduce order of events without complete timestamps.",
+    "timerSeconds": 160,
+    "glitchIntensity": 20,
+    "hasBin": true,
+    "journal": "The riot wasn't spontaneous. The 'Glass Break' sensor triggered BEFORE the alarm, but the police log was edited to justify the tear gas deployment. They broke the window themselves."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "22:00 - Social Media: Crowd gathering peacefully at Block 4.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 200
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Sensor Log: High-frequency vibration (Glass Breaking).",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 200
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Alarm System: Perimeter Breach Alert (East Entrance).",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 200
+      }
+    },
+    {
+      "id": "n4",
+      "text": "22:05 - Police Radio: 'Officers under fire! Requesting support.'",
+      "type": "fake",
+      "position": {
+        "x": 350,
+        "y": 400
+      }
+    },
+    {
+      "id": "n5",
+      "text": "22:15 - Hospital Admission: 12 civilians treated for CS Gas inhalation.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 200
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n4"
+    ],
+    "hash": "a9f58df3040d156b2ce9b3d1ef1b11900cd977e7af3666fbe596fb06ec4c3a4c"
+  }
+}

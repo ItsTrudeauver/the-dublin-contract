@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "id": 27,
+    "title": "Contract #027: Deep State",
+    "description": "POLITICAL BLACKMAIL: 9 Nodes, 0 Fakes. High Complexity. Why did the vote flip?",
+    "timerSeconds": 300,
+    "glitchIntensity": 40,
+    "hasBin": false,
+    "journal": "Senator Vance didn't have a change of heart. He was honey-potted. The 'Charity Donation' was a direct payment to the escort's shell account, sent exactly one minute before he flipped his vote on the Privacy Bill."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Hotel Hub: Check-in 'Mr. Smith' (Senator Alias).",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 200
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Escort Phone: Location Ping (Hotel Room 404).",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 100
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Hidden Cam: Recording started.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 300
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Cloud Server: Video File 'Vance_Compromise.mp4' Uploaded.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 200
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Senator Bank: Transfer $50k to 'Orphan Relief'.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 400
+      },
+      "morph": {
+        "text": "--:-- - Senator Bank: Transfer $50k to 'Escort Services LLC'.",
+        "minTime": 150000,
+        "maxTime": 250000
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - Senate Floor: Senator Vance votes 'NAY' on Privacy Bill.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 200
+      },
+      "morph": {
+        "text": "--:-- - Senate Floor: Senator Vance switches vote to 'YAY'.",
+        "minTime": 200000,
+        "maxTime": 300000
+      }
+    },
+    {
+      "id": "n7",
+      "text": "--:-- - Message Log: 'Video received. Do the right thing.'",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 50
+      }
+    },
+    {
+      "id": "n8",
+      "text": "--:-- - Lobbyist Phone: Outgoing Text to Vance.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 500
+      }
+    },
+    {
+      "id": "n9",
+      "text": "--:-- - Bill Passed: Martial Law measures approved.",
+      "type": "real",
+      "position": {
+        "x": 950,
+        "y": 350
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [],
+    "hash": "1ba28085994ca07ef787de7e85c79c19ff9da8fe80467226e7998c7e4cdef418"
+  }
+}

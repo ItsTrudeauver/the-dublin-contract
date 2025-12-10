@@ -1,0 +1,16 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+
+# Secrets (DO NOT UPLOAD)
+data/admin-solutions.json
+
+# Dev Tools & Generated Content
+capture-solutions.js
+generate-guide.js
+hash-levels.js
+solution_screenshots/
+solution_guide/

@@ -1,0 +1,657 @@
+:root {
+    /* PALETTE: Matte Black & Signal Red */
+    --bg-color: #050505;       /* Pure Matte Black */
+    --panel-bg: #111111;       /* Dark Grey surface */
+    --text-main: #f0f0f0;      /* Stark White */
+    --text-muted: #666666;     /* Greyed out text */
+    
+    --accent: #ff2a2a;         /* High-Vis Red (Selection/Action) */
+    --accent-dim: #5c0e0e;     /* Dark Red (Backgrounds/Borders) */
+    --danger: #ff0000;         /* Pure Red (Errors/Bin) */
+    
+    --node-bg: #0a0a0a;        /* Node Background */
+    --node-border: #333333;    /* Node Border (Inactive) */
+    
+    /* Fonts */
+    --font-ui: 'Space Grotesk', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; user-select: none; }
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-ui);
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* --- HUD --- */
+#hud {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(5, 5, 5, 0.95);
+    border-bottom: 1px solid var(--node-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    z-index: 100;
+}
+
+#level-title {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+button {
+    background: transparent;
+    border: 1px solid var(--text-muted);
+    color: var(--text-muted);
+    padding: 0.5rem 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+
+button:hover {
+    border-color: var(--text-main);
+    color: var(--text-main);
+}
+
+.primary-action {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.primary-action:hover {
+    background: var(--accent);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--accent-dim);
+}
+
+/* --- GAME BOARD --- */
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    /* Optional: Subtle grid background for tech feel */
+    background-image: 
+        linear-gradient(rgba(255, 42, 42, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 42, 42, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    overflow: hidden; 
+    cursor: grab;
+}
+#game-container:active {
+    cursor: grabbing;
+}
+
+#world-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: 0 0; /* Critical for zooming math */
+    will-change: transform; /* Performance hint */
+}
+
+/* Ensure UI elements sit ABOVE the world */
+#hud, #bin-zone, #sidebar, #clue-panel, #modal-overlay {
+    z-index: 1000; /* High Z-Index to float above the zoomed world */
+    pointer-events: auto; /* Ensure they are clickable */
+}
+
+#connections-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: visible;
+}
+
+/* --- NODES --- */
+.node {
+    position: absolute;
+    width: 240px;
+    background: var(--node-bg);
+    border: 1px solid var(--node-border);
+    border-left: 3px solid var(--node-border); /* Tech accent on left */
+    padding: 1rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    cursor: grab;
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.node:active { cursor: grabbing; }
+
+.node.selected {
+    border-color: var(--accent);
+    border-left-color: var(--accent);
+    box-shadow: 0 0 15px rgba(255, 42, 42, 0.15);
+}
+
+/* --- CLUE PANEL --- */
+#clue-panel {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 320px;
+    max-height: 40vh;
+    background: var(--panel-bg);
+    border: 1px solid var(--node-border);
+    padding: 1.5rem;
+    overflow-y: auto;
+    z-index: 50;
+    font-family: var(--font-mono);
+    box-shadow: -5px 5px 0px rgba(0,0,0,0.5);
+}
+
+#clue-panel h3 { 
+    margin-top: 0; 
+    font-size: 0.9rem; 
+    color: var(--accent);
+    border-bottom: 1px solid var(--node-border); 
+    padding-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+#clue-list { 
+    padding-left: 1rem; 
+    font-size: 0.75rem; 
+    color: var(--text-main); 
+    line-height: 1.6;
+}
+
+#clue-list li { margin-bottom: 0.5rem; }
+
+/* --- BIN ZONE --- */
+#bin-zone {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 100px;
+    background: linear-gradient(to top, rgba(20, 0, 0, 0.9), transparent);
+    border-top: 1px solid var(--accent-dim);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    z-index: 5;
+    font-family: var(--font-mono);
+    letter-spacing: 2px;
+    transition: height 0.3s;
+}
+
+.hidden { display: none !important; }
+
+/* --- UTILS --- */
+/* SVG Line Styles */
+path.arrow-line {
+    stroke: var(--text-muted); /* Default grey arrows */
+    stroke-width: 2;
+    fill: none;
+    transition: stroke 0.2s;
+    pointer-events: stroke; /* CRITICAL: Allows clicking the line even if SVG layer is ignored */
+    cursor: pointer;
+}
+
+/* Active arrows turn Red */
+path.arrow-line.active {
+    stroke: var(--accent);
+}
+
+path.arrow-simultaneity { stroke-dasharray: 4, 4; }
+path.arrow-consequence { stroke-width: 3; }
+
+/* Markers (Arrowheads) */
+#marker-default path { fill: var(--text-muted); }
+#marker-active path { fill: var(--accent); }
+/* --- EDGE CONTROLS (Floating Menu) --- */
+#edge-controls {
+    position: absolute;
+    background: var(--panel-bg);
+    border: 1px solid var(--accent);
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 100;
+    pointer-events: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transform: translate(-50%, -50%); /* Center on the point */
+}
+
+#edge-controls button {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--node-border);
+    background: rgba(0,0,0,0.5);
+    color: var(--text-main);
+}
+
+#edge-controls button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+#edge-controls button.active {
+    background: var(--accent);
+    color: var(--bg-color);
+    border-color: var(--accent);
+}
+
+#edge-controls button.btn-delete {
+    border-color: var(--danger);
+    color: var(--danger);
+}
+
+#edge-controls button.btn-delete:hover {
+    background: var(--danger);
+    color: var(--text-main);
+}
+#timer.danger {
+    color: var(--danger);
+    text-shadow: 0 0 10px var(--danger);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+/* --- BIN ANIMATIONS --- */
+@keyframes suck-into-bin {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+        filter: brightness(1);
+    }
+    20% {
+        transform: scale(1.1) rotate(-5deg); /* Anticipation swell */
+        filter: brightness(2) drop-shadow(0 0 10px red); /* Flash red */
+    }
+    100% {
+        transform: scale(0) rotate(720deg) translateY(200px); /* Spin down */
+        opacity: 0;
+    }
+}
+
+.node.being-binned {
+    animation: suck-into-bin 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+    pointer-events: none; /* Prevent grabbing while dying */
+    z-index: 100 !important;
+}
+
+/* Make bin look more active when hovering */
+#bin-zone.hover-active {
+    border-color: var(--danger);
+    background: linear-gradient(to top, rgba(255, 0, 0, 0.3), transparent);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    transform: translateX(-50%) scale(1.05); /* Pulse up */
+}
+/* --- TRANSFORMED BINNED NODES --- */
+.node.binned {
+    /* Override position to stick to the left "Parking Lot" */
+    position: fixed !important; 
+    left: 10px !important;
+    /* Top will be calculated via JS variable, or we stack them */
+    width: 200px !important;
+    height: auto !important;
+    min-height: 40px !important;
+    
+    /* Visual Transformation */
+    background: #000 !important;
+    border: 1px solid #444 !important;
+    border-left: 4px solid var(--danger) !important;
+    color: #666 !important;
+    z-index: 9999 !important; /* On top of everything */
+    
+    /* Hide the minimize button inside it so you don't click it again */
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.node.binned:hover {
+    border-color: var(--accent) !important;
+    color: var(--text-main) !important;
+    transform: translateX(10px);
+}
+
+/* Hide the little minimize button when already binned */
+.node.binned .min-btn {
+    display: none !important;
+}
+
+/* Add a label to indicate it's archived */
+.node.binned::before {
+    content: "[ARCHIVED] ";
+    color: var(--danger);
+    font-weight: bold;
+    font-size: 0.7rem;
+    display: inline-block;
+    margin-right: 5px;
+}
+/* --- ARCHIVED NODE TRANSFORMATION --- */
+.node.archived {
+    /* Lock position to the left sidebar area */
+    position: fixed !important;
+    left: 10px !important;
+    
+    /* Shrink and Style */
+    width: 200px !important;
+    height: 40px !important;
+    overflow: hidden !important;
+    background: #050505 !important;
+    border: 1px solid #333 !important;
+    border-left: 4px solid var(--accent) !important; /* Red indicator */
+    color: #666 !important;
+    font-size: 0.7rem !important;
+    z-index: 9999 !important;
+    
+    /* Interaction */
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    transition: top 0.3s ease, left 0.3s ease;
+    
+    /* Flex layout for the content */
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 10px !important;
+}
+
+.node.archived:hover {
+    border-color: var(--text-main) !important;
+    color: var(--text-main) !important;
+    transform: translateX(5px);
+}
+
+/* Hide the minimize button when archived so you don't click it again */
+.node.archived .min-btn {
+    display: none !important;
+}
+
+/* Add a prefix */
+.node.archived::before {
+    content: "📁 ";
+    margin-right: 5px;
+}
+/* --- CASEBOOK --- */
+#btn-casebook {
+    border-color: var(--accent);
+    color: var(--accent);
+    margin-right: 1rem;
+}
+
+#casebook-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.casebook-content {
+    width: 600px;
+    max-height: 80vh;
+    background: var(--panel-bg);
+    border: 1px solid var(--node-border);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.casebook-content h2 {
+    color: var(--text-main);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-top: 0;
+    letter-spacing: 2px;
+}
+
+#casebook-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    border: 1px solid #222;
+    background: #0a0a0a;
+    padding: 1rem;
+}
+
+.log-entry {
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-mono);
+    color: var(--accent);
+}
+
+.log-body {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+#btn-close-casebook {
+    align-self: flex-end;
+    background: var(--accent);
+    color: black;
+    border: none;
+}
+
+#btn-close-casebook:hover {
+    background: white;
+}
+/* 1. Fix the Sidebar Position */
+/* Push it down so it starts BELOW the HUD */
+#sidebar {
+    position: fixed; 
+    top: 70px;          /* HUD is 60px, so we start at 70px to give breathing room */
+    left: 10px;         /* Little padding from the edge */
+    width: 220px;       /* Reserve space for the archived nodes */
+    bottom: 0;          /* Stretch to bottom */
+    z-index: 90;        /* Sit just below the HUD (which is 100) */
+    pointer-events: none; /* Let clicks pass through empty areas */
+}
+
+/* Style the text so it's not just raw HTML */
+.sidebar-title {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--node-border);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    opacity: 0.6;
+}
+
+/* 2. Fix the Modal Z-Index */
+/* Force the "System Message" / "Success" screen to be on top of EVERYTHING */
+#modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9); /* Darken the background more */
+    z-index: 9999; /* Nuclear option: Higher than HUD (100) and Nodes (10) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px); /* Optional: Nice blur effect */
+}
+
+/* Ensure the modal box itself is visible */
+.modal-box {
+    background: var(--panel-bg);
+    border: 1px solid var(--accent);
+    padding: 2rem;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+
+/* 3. Ensure Archived Nodes are still clickable */
+/* Since we set pointer-events: none on the sidebar container, we need to re-enable them for the items */
+#sidebar .node.binned, 
+#sidebar .node.archived {
+    pointer-events: auto;
+}
+/* Add this anywhere in style.css */
+.min-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background: #222;
+    color: #666;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-left: 1px solid #444;
+    border-bottom: 1px solid #444;
+    z-index: 50;
+    content: "_"; /* Visual label */
+}
+
+/* We use ::after to render the symbol so we don't rely on innerHTML */
+.min-btn::after {
+    content: "_";
+    display: block;
+    margin-top: -2px;
+}
+
+.min-btn:hover {
+    background: var(--accent);
+    color: white;
+}
+#btn-audio {
+    border-color: var(--node-border);
+    color: var(--text-muted);
+    min-width: 80px;
+    margin-right: 10px;
+}
+#btn-audio:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+/* --- LANDING PAGE --- */
+#landing-page {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: var(--bg-color);
+    z-index: 5000; /* Top of stack */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    /* Cool grid background effect */
+    background-image: 
+        linear-gradient(rgba(255, 42, 42, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 42, 42, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.landing-content {
+    max-width: 600px;
+    padding: 2rem;
+    border: 1px solid var(--node-border);
+    background: rgba(10, 10, 10, 0.9);
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+
+.landing-content h1 {
+    font-family: var(--font-mono);
+    font-size: 3rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+    letter-spacing: -2px;
+    text-shadow: 4px 4px 0px var(--accent-dim);
+}
+
+.subtitle {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--node-border);
+    padding-bottom: 1rem;
+    display: inline-block;
+}
+
+.mission-brief {
+    text-align: left;
+    margin-bottom: 3rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
+}
+
+.flavor-text {
+    font-style: italic;
+    margin-top: 1rem;
+    color: var(--text-main);
+}
+
+#btn-start-game {
+    font-size: 1.2rem;
+    padding: 1rem 3rem;
+    background: var(--accent);
+    color: black;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#btn-start-game:hover {
+    background: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--accent);
+}
+
+.audio-warning {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    color: #444;
+    text-transform: uppercase;
+}
+
+/* Helper to hide the game until started */
+.hidden{ display: none !important; }

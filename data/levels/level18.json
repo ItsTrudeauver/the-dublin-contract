@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "id": 18,
+    "title": "Contract #018: Toxic Assets",
+    "description": "CONTAMINATION: No Bin. Trace the failure of the automated safety valve.",
+    "timerSeconds": 200,
+    "glitchIntensity": 20,
+    "hasBin": false,
+    "journal": "The automated systems worked perfectly; they tried to close the valve. A manual override command was sent from the Site Manager's tablet to force the valve open, dumping the sludge into the river."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Chemical Sensor: Toxicity High (Alert).",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 200
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Valve Controller: Auto-Close protocol initiated.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 200
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Admin Tablet: Command 'Manual Override / Force Open'.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 400
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Valve State: Status remains 'OPEN'.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 200
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Outflow Meter: Discharge rate 500L/min.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 200
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - River Gauge: Water level rises abruptly.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 400
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [],
+    "hash": "3dd502d28b9c7e197634bd5c27c89517f91cffe372af6dafe8bfa1bd393523a9"
+  }
+}

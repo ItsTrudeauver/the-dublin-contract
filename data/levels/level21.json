@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "id": 21,
+    "title": "Contract #021: The Leak",
+    "description": "WHISTLEBLOWER: 7 Nodes, 1 Hub. Determine the source of the data exfiltration.",
+    "timerSeconds": 240,
+    "glitchIntensity": 30,
+    "hasBin": true,
+    "journal": "The Junior Analyst was the perfect scapegoat. The logs initially showed their credentials accessing the file, but the deep-layer trace proved it was a Remote Admin session tunneling through their account."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - User Access Log: 'J. Smith (Analyst) - Login Successful'.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 250
+      },
+      "morph": {
+        "text": "--:-- - User Access Log: 'Remote Admin Override (Spoofed as J. Smith)'.",
+        "minTime": 180000,
+        "maxTime": 300000
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Internal Server: 'Project OMEGA' accessed.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 250
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Data Loss Prevention: Large outgoing packet detected.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 250
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Printer Log: 'Document Printed by J. Smith'.",
+      "type": "fake",
+      "position": {
+        "x": 350,
+        "y": 450
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - External Router: Connection to Encrypted Node.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 100
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - HR Record: 'J. Smith flagged for debt issues'.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 100
+      }
+    },
+    {
+      "id": "n7",
+      "text": "--:-- - File Integrity: Hash mismatch (Modified).",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 250
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n4"
+    ],
+    "hash": "ea87fd937765759d68cc251d3b458a2496d0e9e1f06c3eb570a81b39b656f5d2"
+  }
+}

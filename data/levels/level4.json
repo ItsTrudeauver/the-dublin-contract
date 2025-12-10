@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "id": 4,
+    "title": "Contract #004: The Insider",
+    "description": "INTELLIGENCE ALERT: Contradictory data detected. Click minimise to bin false evidence.",
+    "timerSeconds": 120,
+    "glitchIntensity": 5,
+    "hasBin": true,
+    "journal": "The Security Log was fabricated. Someone logged the room 'Empty' manually while the Head of IT was physically inside exporting the database. This was an inside job."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "01:15 - Door Sensor: Server Room B access granted via ID Card #449.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 200
+      }
+    },
+    {
+      "id": "n2",
+      "text": "01:16 - CCTV: Subject identified as Head of IT enters Server Room B.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 100
+      }
+    },
+    {
+      "id": "n3",
+      "text": "01:18 - Security Log: Patrol Officer reports Server Room B is empty and locked.",
+      "type": "fake",
+      "position": {
+        "x": 350,
+        "y": 300
+      }
+    },
+    {
+      "id": "n4",
+      "text": "01:20 - Network Log: Manual override of firewalls initiated from Server Room B terminal.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 200
+      }
+    },
+    {
+      "id": "n5",
+      "text": "01:25 - System Alert: Confidential database export started.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 200
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n3"
+    ],
+    "hash": "6fbb76230793b698bb8f4ca107f977a3dff2a2a229b68dc2a4d3ae029aad527b"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "id": 7,
+    "title": "Contract #007: The Drop",
+    "description": "AVIATION INCIDENT: Drone crash. Weather report conflicts with RF Spectrum analysis.",
+    "timerSeconds": 140,
+    "glitchIntensity": 20,
+    "hasBin": true,
+    "journal": "The Weather Report was injected to mask the attack. The drone didn't crash because of wind; it lost control because a localized RF Jammer severed its link. Someone wanted that package in the river."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "13:50 - RF Scanner: High-power signal jammer active near Ha'penny Bridge.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 100
+      }
+    },
+    {
+      "id": "n2",
+      "text": "14:00 - Weather API: Sudden localized gust (90km/h) recorded.",
+      "type": "fake",
+      "position": {
+        "x": 100,
+        "y": 300
+      }
+    },
+    {
+      "id": "n3",
+      "text": "14:00 - Drone Telemetry: Connection Lost / Control Surface Lock.",
+      "type": "real",
+      "position": {
+        "x": 400,
+        "y": 200
+      }
+    },
+    {
+      "id": "n4",
+      "text": "14:01 - CCTV: Drone spins out and impacts water.",
+      "type": "real",
+      "position": {
+        "x": 700,
+        "y": 200
+      }
+    },
+    {
+      "id": "n5",
+      "text": "14:05 - Police Report: Officers secure package from riverbank.",
+      "type": "real",
+      "position": {
+        "x": 950,
+        "y": 200
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n2"
+    ],
+    "hash": "62b69a52d66696a38e8c11f84acef179f636999f1d1d4645e3c1362040c5b767"
+  }
+}

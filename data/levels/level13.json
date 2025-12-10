@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "id": 13,
+    "title": "Contract #013: Power Play",
+    "description": "GRID FAILURE: Timestamps unavailable. Analyze physical chain reaction. Hub node detected.",
+    "timerSeconds": 180,
+    "glitchIntensity": 20,
+    "hasBin": true,
+    "journal": "A manual surge was induced to disable the prison security grid. The localized brownouts in Sector A and B were just side effects of the massive draw required to melt the Main Breaker."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Central Grid: Command 'Override Limits' executed.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 250
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Sector A: Brownout / Voltage Dip.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 100
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Sector B: Brownout / Voltage Dip.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 400
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Main Breaker: Catastrophic Overload (Fused).",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 250
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Prison Security: Mag-locks disengaged.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 250
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - Maint Log: 'Rat infestation caused short circuit.'",
+      "type": "fake",
+      "position": {
+        "x": 600,
+        "y": 100
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n6"
+    ],
+    "hash": "b15978e4280a3f9131aafa17f2e708c0a95bb9fdced6dfa02adc9b66c6c8a22d"
+  }
+}

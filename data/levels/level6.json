@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "id": 6,
+    "title": "Contract #006: The Landlord",
+    "description": "PROPERTY DISPUTE: Analyze IoT logs. Differentiate between user error and system command.",
+    "timerSeconds": 130,
+    "glitchIntensity": 15,
+    "hasBin": true,
+    "journal": "The 'Steady Flow' log was a falsified entry designed to blame the tenant. The Admin Log proves the Landlord accessed the smart valve system remotely and spiked the pressure to burst the pipes. Insurance fraud."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "02:55 - Admin Log: Remote login to Building Water Control from IP (Landlord).",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 150
+      }
+    },
+    {
+      "id": "n2",
+      "text": "03:00 - Smart Meter: Critical pressure spike (80 PSI) detected.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 150
+      }
+    },
+    {
+      "id": "n3",
+      "text": "03:00 - Usage Log: Constant low-flow detected (Tap left open).",
+      "type": "fake",
+      "position": {
+        "x": 350,
+        "y": 350
+      }
+    },
+    {
+      "id": "n4",
+      "text": "03:05 - Tenant: Sends text 'Help, pipe just exploded!'",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 150
+      }
+    },
+    {
+      "id": "n5",
+      "text": "03:10 - Sensor: Apartment 4B flooded.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 150
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n3"
+    ],
+    "hash": "c5b71d1bb7b109c8c41b6e72b8a7c961c8e88382e9ea6c04da697f5f6d8b27eb"
+  }
+}

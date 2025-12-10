@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "id": 15,
+    "title": "Contract #015: The Asset",
+    "description": "EXTRACTION: Conflicting narratives. Use Simultaneity to corroborate the true path.",
+    "timerSeconds": 210,
+    "glitchIntensity": 30,
+    "hasBin": true,
+    "journal": "The 'Eastside' sighting was a plant. The target was moving West. The Tracker, the Toll Booth, and the Cell Tower all confirm the westward trajectory simultaneously. The witness was paid off."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Safehouse: Silent Alarm triggered.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 250
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - GPS Tracker: Moving West @ 120km/h.",
+      "type": "real",
+      "position": {
+        "x": 400,
+        "y": 250
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - M50 Toll: Plate scanned (Westbound).",
+      "type": "real",
+      "position": {
+        "x": 400,
+        "y": 100
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Cell Tower: Handshake with Target Device (West).",
+      "type": "real",
+      "position": {
+        "x": 400,
+        "y": 400
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Air Traffic: Unidentified Helicopter entering airspace.",
+      "type": "real",
+      "position": {
+        "x": 700,
+        "y": 250
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - Witness: 'I saw him walking near the East Docks.'",
+      "type": "fake",
+      "position": {
+        "x": 400,
+        "y": 550
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n6"
+    ],
+    "hash": "1383f698bc181c2889e59bd7a5812af036b48121b4bc79e5a0bae9066cc349f6"
+  }
+}

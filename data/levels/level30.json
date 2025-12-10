@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "id": 30,
+    "title": "Contract #030: Leviathan",
+    "description": "We are finally here.",
+    "timerSeconds": 480,
+    "glitchIntensity": 100,
+    "hasBin": true,
+    "journal": "It wasn't a perfect storm; it was a perfect circuit. Aethelgard didn't just cause a blackout or fake a virus; they synchronized the collapse of infrastructure, health, and order to justify the military takeover. The city didn't fall. It was switched off."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Aethelgard Core: 'Protocol Zero' Executed.",
+      "type": "real",
+      "position": {
+        "x": 500,
+        "y": 300
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Grid Control: Main Breaker Trip (Citywide).",
+      "type": "real",
+      "position": {
+        "x": 200,
+        "y": 200
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Tactical Command: 'Deployment Authorized'.",
+      "type": "real",
+      "position": {
+        "x": 800,
+        "y": 200
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - National Media: 'EMERGENCY BROADCAST SYSTEM'.",
+      "type": "real",
+      "position": {
+        "x": 500,
+        "y": 500
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Bio-Sensor Hub: 'Critical Alert: Airborne Pathogen'.",
+      "type": "real",
+      "position": {
+        "x": 500,
+        "y": 100
+      },
+      "morph": {
+        "text": "--:-- - Bio-Sensor Hub: 'Alert Source: SIMULATION_FILE_09 (No Pathogen)'.",
+        "minTime": 180000,
+        "maxTime": 300000
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - Grid Log: 'Catastrophic Hardware Failure detected'.",
+      "type": "real",
+      "position": {
+        "x": 200,
+        "y": 50
+      },
+      "morph": {
+        "text": "--:-- - Grid Log: 'External Command: MANUAL_SHUTDOWN received'.",
+        "minTime": 200000,
+        "maxTime": 320000
+      }
+    },
+    {
+      "id": "n7",
+      "text": "--:-- - Encrypted Channel: 'General, protect the civilians.'",
+      "type": "real",
+      "position": {
+        "x": 800,
+        "y": 50
+      },
+      "morph": {
+        "text": "--:-- - Decrypted Channel: 'General, seize parliament. Liquidate dissenters.'",
+        "minTime": 220000,
+        "maxTime": 340000
+      }
+    },
+    {
+      "id": "n8",
+      "text": "--:-- - Cayman Bank: $10M Wire -> General's Offshore.",
+      "type": "real",
+      "position": {
+        "x": 950,
+        "y": 200
+      }
+    },
+    {
+      "id": "n9",
+      "text": "--:-- - Satellite Uplink: Signal Origin 'Aethelgard orbital'.",
+      "type": "real",
+      "position": {
+        "x": 500,
+        "y": 50
+      }
+    },
+    {
+      "id": "n10",
+      "text": "--:-- - Server Room CCTV: Masked figure inserts USB Drive.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 300
+      }
+    },
+    {
+      "id": "n11",
+      "text": "--:-- - Space Weather: 'X-Class Solar Flare hitting Earth'.",
+      "type": "fake",
+      "position": {
+        "x": 100,
+        "y": 100
+      }
+    },
+    {
+      "id": "n12",
+      "text": "--:-- - 999 Dispatch: 'Rival gangs rioting in City Centre'.",
+      "type": "fake",
+      "position": {
+        "x": 950,
+        "y": 500
+      }
+    },
+    {
+      "id": "n13",
+      "text": "--:-- - System Admin: 'Scheduled OS Patch v4.0 running'.",
+      "type": "fake",
+      "position": {
+        "x": 100,
+        "y": 500
+      }
+    },
+    {
+      "id": "n14",
+      "text": "--:-- - Social Media: 'Aliens?? saw lights in sky'.",
+      "type": "fake",
+      "position": {
+        "x": 950,
+        "y": 50
+      }
+    },
+    {
+      "id": "n15",
+      "text": "--:-- - News Ticker: 'Foreign Cyber-Attack Suspected'.",
+      "type": "fake",
+      "position": {
+        "x": 500,
+        "y": 600
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n11",
+      "n12",
+      "n13",
+      "n14",
+      "n15"
+    ],
+    "hash": "0d9ab8373e944f84157f14ac8cd4f10989e0c67d454d781c067c78841607bf9c"
+  }
+}

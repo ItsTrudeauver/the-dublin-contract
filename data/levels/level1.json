@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "id": 1,
+    "title": "Contract #001: Temple Bar",
+    "description": "TUTORIAL: Link events using Cause (=>). Click Source, then Target.",
+    "timerSeconds": null,
+    "glitchIntensity": 0,
+    "hasBin": false,
+    "journal": "Simple assault. CCTV confirms Subject A initiated physical contact. Subject B's retaliation was reactive, not preemptive. Case closed."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "23:14 - CCTV: Subject A spills pint on Subject B's shoes.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 250
+      }
+    },
+    {
+      "id": "n2",
+      "text": "23:15 - Witness: Subject B shouts insults and pushes Subject A.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 150
+      }
+    },
+    {
+      "id": "n3",
+      "text": "23:15 - CCTV: Subject A punches Subject B.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 250
+      }
+    },
+    {
+      "id": "n4",
+      "text": "23:20 - Garda Log: Patrol unit arrests Subject A for assault.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 150
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [],
+    "hash": "b82c9d22f71c73ca993d3a2842029c06df5e88999fd3dde8e5c0b0c4f5518c36"
+  }
+}

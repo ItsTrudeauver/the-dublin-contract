@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "id": 26,
+    "title": "Contract #026: False Flag",
+    "description": "MASS CASUALTY: 10 Nodes, 3 Hubs, 2 Dummies. Infrastructure sabotage.",
+    "timerSeconds": 300,
+    "glitchIntensity": 55,
+    "hasBin": true,
+    "journal": "The Metro crash wasn't driver error. Central Control overrode the signals to green on intersecting tracks. The 'Terrorist Manifesto' was uploaded to the server AFTER the crash by an Admin IP."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "--:-- - Central Control Hub: Signal Override Command.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 300
+      }
+    },
+    {
+      "id": "n2",
+      "text": "--:-- - Track A Signal: Turns GREEN.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 200
+      }
+    },
+    {
+      "id": "n3",
+      "text": "--:-- - Track B Signal: Turns GREEN.",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 400
+      }
+    },
+    {
+      "id": "n4",
+      "text": "--:-- - Train 101 Telemetry: Speed 80km/h.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 200
+      }
+    },
+    {
+      "id": "n5",
+      "text": "--:-- - Train 202 Telemetry: Speed 75km/h.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 400
+      }
+    },
+    {
+      "id": "n6",
+      "text": "--:-- - Impact Sensor: Catastrophic Collision.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 300
+      }
+    },
+    {
+      "id": "n7",
+      "text": "--:-- - Maint Log: 'Signals inspected. All Clear.'",
+      "type": "real",
+      "position": {
+        "x": 350,
+        "y": 50
+      },
+      "morph": {
+        "text": "--:-- - Maint Log: 'Signal Relay hardware removed manually.'",
+        "minTime": 200000,
+        "maxTime": 300000
+      }
+    },
+    {
+      "id": "n8",
+      "text": "--:-- - Server Log: 'Manifesto.pdf' uploaded.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 100
+      },
+      "morph": {
+        "text": "--:-- - Server Log: 'Manifesto.pdf' uploaded (Source: Admin Terminal).",
+        "minTime": 180000,
+        "maxTime": 280000
+      }
+    },
+    {
+      "id": "n9",
+      "text": "--:-- - Media Outlet: 'Rebel group claims responsibility.'",
+      "type": "fake",
+      "position": {
+        "x": 850,
+        "y": 500
+      }
+    },
+    {
+      "id": "n10",
+      "text": "--:-- - Driver Alcohol Test: Positive.",
+      "type": "fake",
+      "position": {
+        "x": 600,
+        "y": 50
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n9",
+      "n10"
+    ],
+    "hash": "8d1f8b300adf3de08e2aa96628a51f539112ebeb8c04f223d00b7a5dfe7c92b3"
+  }
+}

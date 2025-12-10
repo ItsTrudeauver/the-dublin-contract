@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "id": 5,
+    "title": "Contract #005: Dead Man Walking",
+    "description": "BIO-DATA MISMATCH: Cloud sync conflicts with forensic pathology. Determine true time of death.",
+    "timerSeconds": 120,
+    "glitchIntensity": 10,
+    "hasBin": true,
+    "journal": "The Cloud Data was fabricated to create a digital alibi. The victim was already dead at 20:00. The steps recorded at 21:30 were injected into the server to make it look like they were still alive."
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "20:00 - Coroner Report: Estimated Time of Death based on liver temp.",
+      "type": "real",
+      "position": {
+        "x": 100,
+        "y": 200
+      }
+    },
+    {
+      "id": "n2",
+      "text": "21:30 - Cloud Sync: User's FitBit uploads 5,000 steps (Jogging Pace).",
+      "type": "fake",
+      "position": {
+        "x": 350,
+        "y": 300
+      }
+    },
+    {
+      "id": "n3",
+      "text": "22:00 - Witness Statement: Dog walker discovers body in Phoenix Park.",
+      "type": "real",
+      "position": {
+        "x": 600,
+        "y": 200
+      }
+    },
+    {
+      "id": "n4",
+      "text": "22:15 - Garda Dispatch: Units arrive at scene.",
+      "type": "real",
+      "position": {
+        "x": 850,
+        "y": 200
+      }
+    }
+  ],
+  "solution": {
+    "mustBin": [
+      "n2"
+    ],
+    "hash": "3c8dd84ac3e8bc39867c9e996f28485f7f5f3a7ca09be3a413f7ba4bda29de1d"
+  }
+}
