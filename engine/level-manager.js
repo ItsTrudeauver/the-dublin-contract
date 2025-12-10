@@ -66,10 +66,19 @@ export class LevelManager {
     }
 
     setupLevel(data) {
+        // 1. Reset State
         this.graph.clear();
         this.clueListEl.innerHTML = ''; 
         this.titleEl.innerText = data.meta.title.toUpperCase();
 
+        // --- FIX: WIPE VISUAL ARTIFACTS ---
+        // Force-clear the board and the sidebar so no "Ghost Nodes" remain
+        document.getElementById('nodes-layer').innerHTML = '';
+        document.getElementById('binned-layer').innerHTML = '';
+        document.getElementById('connections-layer').innerHTML = ''; 
+        // ----------------------------------
+
+        // 3. Spawn Nodes
         data.nodes.forEach(node => {
             const posX = node.position ? node.position.x : 100 + Math.random() * 400;
             const posY = node.position ? node.position.y : 100 + Math.random() * 400;
@@ -91,15 +100,18 @@ export class LevelManager {
             }
         });
 
+        // 4. Clues
         const descItem = document.createElement('li');
         descItem.innerText = `[MISSION]: ${data.meta.description}`;
         descItem.style.color = 'var(--accent)';
         this.clueListEl.appendChild(descItem);
         
+        // 5. Start Engines
         this.ui.render();
         this.timer.start(data.meta.timerSeconds || null);
         this.interference.setLevelIntensity(data.meta.glitchIntensity || 0);
         
+        // 6. Audio
         if (data.meta.id >= 26) {
             this.audio.playTrack('theme_action');
         } else if (data.meta.id >= 11) {
@@ -107,7 +119,6 @@ export class LevelManager {
         } else {
             this.audio.playTrack('theme_calm');
         }
-    
     }
 
     // --- SECURITY HELPERS ---
