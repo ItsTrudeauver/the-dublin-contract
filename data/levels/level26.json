@@ -3,7 +3,7 @@
     "id": 26,
     "title": "Contract #026: False Flag",
     "description": "MASS CASUALTY: 10 Nodes, 3 Hubs, 2 Dummies. Infrastructure sabotage.",
-    "timerSeconds": 300,
+    "timerSeconds": null,
     "glitchIntensity": 55,
     "hasBin": true,
     "journal": "The Metro crash wasn't driver error. Central Control overrode the signals to green on intersecting tracks. The 'Terrorist Manifesto' was uploaded to the server AFTER the crash by an Admin IP."

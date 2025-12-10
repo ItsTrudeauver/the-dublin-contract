@@ -3,7 +3,7 @@
     "id": 24,
     "title": "Contract #024: Black Site",
     "description": "INTERROGATION: 8 Nodes, 1 Hub. Causality Loop. Did the failure cause death, or vice versa?",
-    "timerSeconds": 260,
+    "timerSeconds": null,
     "glitchIntensity": 40,
     "hasBin": true,
     "journal": "The prisoner didn't die from the life support failure. The autopsy morph confirms neurotoxin. They killed him, THEN pulled the plug on the machine to make it look like a system crash."

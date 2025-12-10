@@ -3,7 +3,7 @@
     "id": 19,
     "title": "Contract #019: Ghost Signal",
     "description": "BLACKOUT: Signal analysis. Use Simultaneity to identify the source of the jam.",
-    "timerSeconds": 210,
+    "timerSeconds": null,
     "glitchIntensity": 35,
     "hasBin": true,
     "journal": "The Raid Team didn't lose comms because of a 'dead zone.' An IMSI Catcher (Stingray) was active in the apartment above. It jammed the police band while simultaneously intercepting the warning text to the suspect."

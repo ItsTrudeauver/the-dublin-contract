@@ -3,7 +3,7 @@
     "id": 13,
     "title": "Contract #013: Power Play",
     "description": "GRID FAILURE: Timestamps unavailable. Analyze physical chain reaction. Hub node detected.",
-    "timerSeconds": 180,
+    "timerSeconds": null,
     "glitchIntensity": 20,
     "hasBin": true,
     "journal": "A manual surge was induced to disable the prison security grid. The localized brownouts in Sector A and B were just side effects of the massive draw required to melt the Main Breaker."

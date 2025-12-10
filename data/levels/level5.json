@@ -3,7 +3,7 @@
     "id": 5,
     "title": "Contract #005: Dead Man Walking",
     "description": "BIO-DATA MISMATCH: Cloud sync conflicts with forensic pathology. Determine true time of death.",
-    "timerSeconds": 120,
+    "timerSeconds": null,
     "glitchIntensity": 10,
     "hasBin": true,
     "journal": "The Cloud Data was fabricated to create a digital alibi. The victim was already dead at 20:00. The steps recorded at 21:30 were injected into the server to make it look like they were still alive."

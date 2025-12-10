@@ -3,7 +3,7 @@
     "id": 7,
     "title": "Contract #007: The Drop",
     "description": "AVIATION INCIDENT: Drone crash. Weather report conflicts with RF Spectrum analysis.",
-    "timerSeconds": 140,
+    "timerSeconds": null,
     "glitchIntensity": 20,
     "hasBin": true,
     "journal": "The Weather Report was injected to mask the attack. The drone didn't crash because of wind; it lost control because a localized RF Jammer severed its link. Someone wanted that package in the river."

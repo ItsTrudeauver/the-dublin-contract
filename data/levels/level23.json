@@ -3,7 +3,7 @@
     "id": 23,
     "title": "Contract #023: The Frame",
     "description": "IDENTITY THEFT: 7 Nodes, 2 Fakes. Physical evidence conflicts with digital reality.",
-    "timerSeconds": 260,
+    "timerSeconds": null,
     "glitchIntensity": 45,
     "hasBin": true,
     "journal": "The physical evidence was planted to match a stolen identity. The Metro Pass log initially looked damning, but the system update revealed the card ID didn't match the database hash. It was a clone."

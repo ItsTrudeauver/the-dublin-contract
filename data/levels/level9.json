@@ -3,7 +3,7 @@
     "id": 9,
     "title": "Contract #009: Static Noise",
     "description": "CIVIL UNREST: Timeline corruption detected. Deduce order of events without complete timestamps.",
-    "timerSeconds": 160,
+    "timerSeconds": null,
     "glitchIntensity": 20,
     "hasBin": true,
     "journal": "The riot wasn't spontaneous. The 'Glass Break' sensor triggered BEFORE the alarm, but the police log was edited to justify the tear gas deployment. They broke the window themselves."

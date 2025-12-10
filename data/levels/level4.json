@@ -3,7 +3,7 @@
     "id": 4,
     "title": "Contract #004: The Insider",
     "description": "INTELLIGENCE ALERT: Contradictory data detected. Click minimise to bin false evidence.",
-    "timerSeconds": 120,
+    "timerSeconds": null,
     "glitchIntensity": 5,
     "hasBin": true,
     "journal": "The Security Log was fabricated. Someone logged the room 'Empty' manually while the Head of IT was physically inside exporting the database. This was an inside job."

@@ -3,7 +3,7 @@
     "id": 22,
     "title": "Contract #022: Crossfire",
     "description": "TACTICAL RAID: 8 Nodes, No Fakes. High Simultaneity. Who fired first?",
-    "timerSeconds": 240,
+    "timerSeconds": null,
     "glitchIntensity": 20,
     "hasBin": false,
     "journal": "The Bodycam audio confirms the 'Return Fire' order was given simultaneous to the Breach. The suspect didn't shoot first; the police fired a flashbang that was misidentified as a gunshot by the rookie on point."

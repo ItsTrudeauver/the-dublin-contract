@@ -3,7 +3,7 @@
     "id": 12,
     "title": "Contract #012: Zero Hour",
     "description": "SERVER BLACKOUT: Timestamps purged. Rely on system logic constraints.",
-    "timerSeconds": 180,
+    "timerSeconds": null,
     "glitchIntensity": 30,
     "hasBin": true,
     "journal": "The server wipe was a cover-up. The biometric scan proves the CEO entered the server room before the temperature spike. They melted the drives manually by disabling the HVAC."

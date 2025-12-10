@@ -3,7 +3,7 @@
     "id": 6,
     "title": "Contract #006: The Landlord",
     "description": "PROPERTY DISPUTE: Analyze IoT logs. Differentiate between user error and system command.",
-    "timerSeconds": 130,
+    "timerSeconds": null,
     "glitchIntensity": 15,
     "hasBin": true,
     "journal": "The 'Steady Flow' log was a falsified entry designed to blame the tenant. The Admin Log proves the Landlord accessed the smart valve system remotely and spiked the pressure to burst the pipes. Insurance fraud."

@@ -3,7 +3,7 @@
     "id": 10,
     "title": "Contract #010: Dark Pattern",
     "description": "TRAFFIC CONTROL: Hub structure detected. One event triggers multiple outcomes.",
-    "timerSeconds": 180,
+    "timerSeconds": null,
     "glitchIntensity": 25,
     "hasBin": true,
     "journal": "Aethelgard Logistics parked three trucks at key intersections simultaneously. It wasn't an accident; it was a blockade designed to stop the protest march from reaching City Hall."

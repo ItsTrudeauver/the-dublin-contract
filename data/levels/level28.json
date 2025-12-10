@@ -3,7 +3,7 @@
     "id": 28,
     "title": "Contract #028: Mass Surveillance",
     "description": "PROJECT PANOPTICON: 10 Nodes, 3 Fakes. The system is targeting innocents.",
-    "timerSeconds": 320,
+    "timerSeconds": null,
     "glitchIntensity": 60,
     "hasBin": true,
     "journal": "The 'Terrorist' identified by the drone was a journalist holding a camera, not a weapon. The AI didn't make a mistake; the 'Threat Threshold' was manually lowered to 0% for this specific ID to force a lethal engagement."

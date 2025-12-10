@@ -3,7 +3,7 @@
     "id": 14,
     "title": "Contract #014: Bad Medicine",
     "description": "SUPPLY CHAIN: No contradictions (No Bin). Trace the custody chain of the spoiled cargo.",
-    "timerSeconds": 200,
+    "timerSeconds": null,
     "glitchIntensity": 10,
     "hasBin": false,
     "journal": "The insulin didn't spoil in the warehouse; it cooked in the truck. The driver disabled the refrigeration unit to save fuel during the unauthorized stop. The receiver signed for it without checking the temp tags."

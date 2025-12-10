@@ -3,7 +3,7 @@
     "id": 20,
     "title": "Contract #020: The Architect",
     "description": "HIGH VALUE TARGET: 8 Nodes, 2 Hubs. Intercepted logs are unstable. Trust nothing.",
-    "timerSeconds": 360,
+    "timerSeconds": null,
     "glitchIntensity": 40,
     "hasBin": true,
     "journal": "Police ruled it a robbery, but the data proves an execution. The CEO's Smart Home didn't malfunction; it was commanded to lock him in. The bodyguard didn't 'miss' the intruder; he was ordered to stand down."

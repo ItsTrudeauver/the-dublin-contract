@@ -3,7 +3,7 @@
     "id": 8,
     "title": "Contract #008: The Double",
     "description": "IDENTITY THEFT: Suspect spotted in two locations simultaneously. One timestamp is corrupted.",
-    "timerSeconds": 150,
+    "timerSeconds": null,
     "glitchIntensity": 25,
     "hasBin": true,
     "journal": "The 'Cafe Sightings' were a deepfake projection. The suspect wasn't drinking coffee; they were draining the ATM. The corrupted timestamp on the withdrawal log was a deliberate attempt to hide the sequence."

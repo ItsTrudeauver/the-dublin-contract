@@ -3,7 +3,7 @@
     "id": 18,
     "title": "Contract #018: Toxic Assets",
     "description": "CONTAMINATION: No Bin. Trace the failure of the automated safety valve.",
-    "timerSeconds": 200,
+    "timerSeconds": null,
     "glitchIntensity": 20,
     "hasBin": false,
     "journal": "The automated systems worked perfectly; they tried to close the valve. A manual override command was sent from the Site Manager's tablet to force the valve open, dumping the sludge into the river."

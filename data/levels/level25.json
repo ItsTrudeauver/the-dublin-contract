@@ -3,7 +3,7 @@
     "id": 25,
     "title": "Contract #025: The Purge",
     "description": "COORDINATED STRIKE: 9 Nodes, 2 Hubs, 2 Dummies. Two 'suicides' at the exact same second.",
-    "timerSeconds": 280,
+    "timerSeconds": null,
     "glitchIntensity": 50,
     "hasBin": true,
     "journal": "Two whistleblowers found dead in separate districts. The Police Reports claim suicide, but the Handler's phone pinged both locations sequentially. The autopsy morphs reveal they were injected with the same paralyzing agent."

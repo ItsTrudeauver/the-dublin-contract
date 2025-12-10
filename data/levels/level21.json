@@ -3,7 +3,7 @@
     "id": 21,
     "title": "Contract #021: The Leak",
     "description": "WHISTLEBLOWER: 7 Nodes, 1 Hub. Determine the source of the data exfiltration.",
-    "timerSeconds": 240,
+    "timerSeconds": null,
     "glitchIntensity": 30,
     "hasBin": true,
     "journal": "The Junior Analyst was the perfect scapegoat. The logs initially showed their credentials accessing the file, but the deep-layer trace proved it was a Remote Admin session tunneling through their account."

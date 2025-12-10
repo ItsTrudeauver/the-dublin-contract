@@ -3,7 +3,7 @@
     "id": 16,
     "title": "Contract #016: Clean Slate",
     "description": "DATA INJECTION: High complexity hub. Trace the origin of the record deletion.",
-    "timerSeconds": 190,
+    "timerSeconds": null,
     "glitchIntensity": 25,
     "hasBin": true,
     "journal": "Standard automated maintenance doesn't force open firewalls. Someone used a spoofed IP to inject a 'sudo rm' command. The backup drive corruption was immediate collateral damage."
