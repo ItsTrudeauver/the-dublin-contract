@@ -3,7 +3,7 @@ import { UIManager } from './engine/ui.js';
 import { Graph } from './engine/graph.js';
 import { BinManager } from './engine/bin-manager.js'; 
 import { AudioManager } from './engine/audio-manager.js';
-//import { DevTools } from './engine/dev-tools.js'; // <--- ENABLED
+import { DevTools } from './engine/dev-tools.js'; // <--- ENABLED
 
 const Game = {
     levelManager: null,

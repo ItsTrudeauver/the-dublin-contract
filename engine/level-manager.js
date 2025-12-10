@@ -123,12 +123,22 @@ export class LevelManager {
 
     // --- SECURITY HELPERS ---
 
+    // --- SECURITY HELPERS ---
+
     serializeEdges(edges) {
-        const simplified = edges.map(e => ({
-            s: e.source,
-            t: e.target,
-            y: e.type 
-        }));
+        const simplified = edges.map(e => {
+            let s = e.source;
+            let t = e.target;
+            
+            // --- FIX: NORMALIZE SIMULTANEITY ---
+            // Force A->B direction for dotted lines so user drawing order doesn't matter
+            if (e.type === 'simultaneity' && s > t) {
+                [s, t] = [t, s];
+            }
+            // -----------------------------------
+
+            return { s, t, y: e.type };
+        });
 
         simplified.sort((a, b) => {
             if (a.s !== b.s) return a.s.localeCompare(b.s);

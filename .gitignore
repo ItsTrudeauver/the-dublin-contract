@@ -12,5 +12,7 @@ data/admin-solutions.json
 capture-solutions.js
 generate-guide.js
 hash-levels.js
+sync-levels.js
+update-hash.js
 solution_screenshots/
 solution_guide/
