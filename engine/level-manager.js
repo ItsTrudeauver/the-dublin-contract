@@ -191,7 +191,9 @@ export class LevelManager {
         // 1. Check Bins
         for (const badNodeId of requiredBins) {
             if (!playerBins.has(badNodeId)) {
-                this.showFeedback("FAILURE: CONTRADICTORY EVIDENCE REMAINS.", "fail");
+                // OLD: this.showFeedback("FAILURE: CONTRADICTORY EVIDENCE REMAINS.", "fail");
+                // NEW: Generic Error
+                this.showFeedback("ANALYSIS FAILED: INSUFFICIENT DATA.", "fail");
                 return;
             }
         }
@@ -209,6 +211,7 @@ export class LevelManager {
         const playerHash = await this.hashString(playerString);
 
         if (playerHash === targetHash) {
+            // ... (Success logic remains the same) ...
             this.showFeedback("CONTRACT FULFILLED. UPLOADING...", "success");
             
             const journalText = this.currentLevelData.meta.journal || "Case resolved.";
@@ -217,10 +220,10 @@ export class LevelManager {
             const nextId = this.currentLevelId + 1;
             this.saveProgress(nextId);
             if (nextId > 30) {
-                this.saveProgress(nextId); // Save that they finished
+                this.saveProgress(nextId); 
                 setTimeout(() => {
                     document.getElementById('modal-overlay').classList.add('hidden');
-                    this.triggerVictorySequence(); // <--- CALL NEW METHOD
+                    this.triggerVictorySequence(); 
                 }, 2000);
                 return;
             }
@@ -230,7 +233,9 @@ export class LevelManager {
                 this.loadLevel(nextId);
             }, 2000);
         } else {
-            this.showFeedback("ANALYSIS FAILED: LOGIC ERROR DETECTED.", "fail");
+            // OLD: this.showFeedback("ANALYSIS FAILED: LOGIC ERROR DETECTED.", "fail");
+            // NEW: Generic Error (Same message as above so they don't know WHY it failed)
+            this.showFeedback("ANALYSIS FAILED: INSUFFICIENT DATA.", "fail");
         }
     }
 
