@@ -243,19 +243,15 @@ export class UIManager {
                 el.id = node.id;
                 el.className = 'node'; 
                 
-                // Note: We leave the div empty; the CSS ::after handles the "_" text
                 el.innerHTML = `${node.text}<div class="min-btn" title="Archive"></div>`;
-                
                 el.style.left = `${node.position.x}px`;
                 el.style.top = `${node.position.y}px`;
                 
                 this.nodesLayer.appendChild(el);
                 
-                // --- EVENTS ---
-                
                 // A. Drag Start
                 el.addEventListener('mousedown', (e) => {
-                    if (e.target.classList.contains('min-btn')) return; // Ignore button
+                    if (e.target.classList.contains('min-btn')) return;
                     if (e.button !== 0) return; 
                     e.stopPropagation();
 
@@ -277,30 +273,41 @@ export class UIManager {
                     this.handleNodeClick(node.id);
                 });
 
-                // C. BINNING ACTION (New!)
+                // C. BINNING ACTION
                 const btn = el.querySelector('.min-btn');
                 if (btn) {
                     btn.addEventListener('click', (e) => {
-                        e.stopPropagation(); // Don't select the node
-                        this.graph.binNode(node.id); // Tell Logic to bin it
-                        el.classList.add('archived'); // Tell CSS to hide it
+                        e.stopPropagation(); 
+                        
+                        // --- FIX: DESELECT TO PREVENT GHOST LINKS ---
+                        if (this.selectedNodeId === node.id) {
+                            this.deselectAll();
+                        }
+                        // --------------------------------------------
+
+                        this.graph.binNode(node.id); 
+                        el.classList.add('archived'); 
                     });
                 }
             } 
             // 2. Update Existing Node
             else {
-                // Scrub ghost classes so nodes don't stay "archived" between levels
                 el.classList.remove('binned', 'archived', 'being-binned'); 
                 
-                // Safe content update
                 if (!el.innerHTML.includes(node.text)) {
                      el.innerHTML = `${node.text}<div class="min-btn" title="Archive"></div>`;
                      
-                     // Re-attach listener since we wiped innerHTML
                      const btn = el.querySelector('.min-btn');
                      if(btn) {
                          btn.addEventListener('click', (e) => {
                             e.stopPropagation();
+
+                            // --- FIX: DESELECT HERE TOO ---
+                            if (this.selectedNodeId === node.id) {
+                                this.deselectAll();
+                            }
+                            // ------------------------------
+
                             this.graph.binNode(node.id);
                             el.classList.add('archived');
                          });
@@ -311,7 +318,6 @@ export class UIManager {
                 el.style.top = `${node.position.y}px`;
             }
             
-            // Selection Highlight
             if (this.selectedNodeId === node.id) {
                 el.classList.add('selected');
             } else {
