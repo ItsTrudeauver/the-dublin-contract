@@ -33,6 +33,14 @@
             </div>
 
             <button id="btn-start-game">INITIATE SYSTEM</button>
+            
+            
+            <div id="mission-archives" class="hidden">
+                <p class="archive-label">/// MISSION ARCHIVES ///</p>
+                <div id="level-grid"></div>
+            </div>
+
+            
             <p class="audio-warning">HEADPHONES RECOMMENDED</p>
         </div>
     </section>
@@ -45,9 +53,11 @@
                 <div id="timer" class="hidden">00:00</div>
             </div>
             <div class="hud-right">
+                <button id="btn-missions">MISSIONS</button> 
                 <button id="btn-audio">MUTE</button>
                 <button id="btn-reset">RESET BOARD</button>
                 <button id="btn-submit" class="primary-action">SUBMIT REPORT</button>
+            
             </div>
         </header>
 
@@ -74,6 +84,13 @@
                 <h2 id="modal-title">SYSTEM MESSAGE</h2>
                 <p id="modal-body">...</p>
                 <button id="modal-btn">ACKNOWLEDGE</button>
+            </div>
+        </div>
+        <div id="mission-overlay" class="hidden">
+            <div class="mission-box">
+                <h2>MISSION ARCHIVES</h2>
+                <div id="mission-grid"></div>
+                <button id="btn-close-missions">CLOSE ARCHIVES</button>
             </div>
         </div>
 

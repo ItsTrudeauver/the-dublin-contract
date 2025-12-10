@@ -655,3 +655,119 @@ path.arrow-consequence { stroke-width: 3; }
 
 /* Helper to hide the game until started */
 .hidden{ display: none !important; }
+/* --- LEVEL SELECTOR --- */
+#mission-archives {
+    margin-top: 2rem;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.archive-label {
+    font-family: var(--font-mono);
+    color: #666;
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+#level-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 buttons per row */
+    gap: 5px;
+}
+
+.level-btn {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--node-border);
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.level-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(255, 42, 42, 0.1);
+}
+
+.level-btn.current {
+    border-color: var(--accent);
+    color: black;
+    background: var(--accent);
+    font-weight: bold;
+}
+/* --- MISSION SELECTOR MODAL --- */
+#mission-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.95); /* Very dark background */
+    z-index: 2000; /* Above HUD */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.mission-box {
+    width: 600px;
+    background: var(--panel-bg);
+    border: 1px solid var(--accent);
+    padding: 2rem;
+    box-shadow: 0 0 50px rgba(255, 42, 42, 0.1);
+    text-align: center;
+}
+
+.mission-box h2 {
+    font-family: var(--font-mono);
+    color: var(--accent);
+    border-bottom: 1px solid var(--node-border);
+    padding-bottom: 1rem;
+    margin-top: 0;
+    letter-spacing: 2px;
+}
+
+#mission-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 cols */
+    gap: 10px;
+    margin: 2rem 0;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+#mission-grid button {
+    background: rgba(0,0,0,0.5);
+    border: 1px solid var(--node-border);
+    color: var(--text-muted);
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+
+#mission-grid button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(255, 42, 42, 0.1);
+}
+
+#mission-grid button.current-level {
+    border-color: var(--text-main);
+    color: var(--text-main);
+    background: var(--accent-dim);
+}
+
+#btn-close-missions {
+    margin-top: 1rem;
+    border-color: var(--text-muted);
+    width: 100%;
+}
+#btn-close-missions:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}

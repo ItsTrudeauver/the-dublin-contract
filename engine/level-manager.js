@@ -39,7 +39,11 @@ export class LevelManager {
     }
 
     saveProgress(levelId) {
-        localStorage.setItem('dublin_contract_save', levelId.toString());
+        // SAFETY CHECK: Only overwrite if the new level is higher than the current save
+        const currentSave = this.getSavedLevel();
+        if (levelId > currentSave) {
+            localStorage.setItem('dublin_contract_save', levelId.toString());
+        }
     }
 
     async loadLevel(levelId) {
